@@ -1,4 +1,4 @@
-public class Iten {
+public class ItemPedido {
     private double valor;
     private static double somaPedido=0;
 
@@ -15,11 +15,11 @@ public class Iten {
     }
 
     public static void setSomaPedido(double somaPedido) {
-        Iten.somaPedido = somaPedido;
+        ItemPedido.somaPedido = somaPedido;
     }
 
-    public double calcularNota() {
-        this.somaPedido= Comanda.calcularNota(this.somaPedido, this.valor);
+    public double calcularPedido() {
+        this.somaPedido= Comanda.calcularComanda(this.somaPedido, this.valor);
         return getSomaPedido();
     }
 }
